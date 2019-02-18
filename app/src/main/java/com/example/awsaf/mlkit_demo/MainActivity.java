@@ -331,6 +331,9 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "Text recognised... ->"+resultText, Toast.LENGTH_SHORT).show();
                             Log.i("Awsaf text",resultText);
                             btnCapturePicture.setText(resultText);
+                            if(resultText.contains("napa")){
+                                Toast.makeText(MainActivity.this, "Medicine found", Toast.LENGTH_SHORT).show();
+                            }
 
                             for (FirebaseVisionText.TextBlock block: result.getTextBlocks()) {
                                 String blockText = block.getText();
